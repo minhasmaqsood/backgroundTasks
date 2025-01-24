@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { Text, View, StyleSheet, Alert, Linking } from 'react-native';
+import { Text, View, StyleSheet, Alert } from 'react-native';
 import BackgroundFetch from 'react-native-background-fetch';
 import BackgroundService from 'react-native-background-actions';
-import DeviceInfo from 'react-native-device-info';
 import BatteryOptimization from 'react-native-battery-optimization-check';
 
 
-const veryIntensiveTask = async (taskDataArguments) => {
-  const { delay } = taskDataArguments;
+const veryIntensiveTask = async (taskDataArguments?: { delay: number }) => {
+  const delay = taskDataArguments?.delay ?? 1000; // Default delay to 1000 if undefined
   for (let i = 0; BackgroundService.isRunning(); i++) {
     console.log(`Running background task iteration ${i}`);
     await new Promise(resolve => setTimeout(resolve, delay));
@@ -41,6 +40,12 @@ const checkBatteryOptimization = async () => {
       ]
     );
   }
+};
+
+const onBackgroundFetch = async (taskId: string) => {
+  console.log('[BackgroundFetch] Task ID:', taskId);
+  // Perform your background task here
+  BackgroundFetch.finish(taskId);
 };
 
 const App = () => {

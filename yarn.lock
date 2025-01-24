@@ -4277,7 +4277,17 @@ react-native-background-fetch@^4.2.5:
   resolved "https://registry.npmjs.org/react-native-background-fetch/-/react-native-background-fetch-4.2.5.tgz"
   integrity sha512-llOU+UWPd1fjOFGNGB4v4YrYaA0sMLn5hMk0aNx0Ok9+wQ2nQillVwj7G/XZEpIiD2vTVkntTNNXWycF5Ju0kQ==
 
-react-native@*, react-native@>=0.47.0, react-native@0.74.3:
+react-native-battery-optimization-check@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/react-native-battery-optimization-check/-/react-native-battery-optimization-check-1.0.8.tgz"
+  integrity sha512-OXACVlMho/rmTg3YS2GQ0juGb7YKJTrvUnD7BMDNGpAUm6ykcgkU0i3vML76ZHRYTO1rB5Pdh4re+LeKSvVWsQ==
+
+react-native-device-info@^14.0.2:
+  version "14.0.2"
+  resolved "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-14.0.2.tgz"
+  integrity sha512-W1oqu4dC4uLKT/Z4uimRP6birJprWjhMP/AwV9hxGSZ5K3wJ/yb34aQ22sd6HmegQHfT2PmkFs3mj+4uXLE1YQ==
+
+react-native@*, react-native@>=0.47.0, react-native@>=0.63.3, react-native@0.74.3:
   version "0.74.3"
   dependencies:
     "@jest/create-cache-key-function" "^29.6.3"
